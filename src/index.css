@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Be+Vietnam+Pro:wght@800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Archivo", "Be Vietnam Pro", sans-serif;
+  --font-mono: "Fira Code", monospace;
+  
+  --color-sage: #7fa18a;
+  --color-mustard: #e5b042;
+  --color-terracotta: #e26a37;
+  --color-clay-red: #ca5c54;
+  --color-paper-cream: #fbf9f4;
+  --color-solid-black: #0f172a;
+}
+
+/* 1. Background: Matte school graph paper grid with mờ (faint) orange grid lines */
+body {
+  background-color: #fffdf9 !important; /* Soft matte cream/beige paper base */
+  background-image: 
+    linear-gradient(to right, rgba(243, 114, 44, 0.08) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(243, 114, 44, 0.08) 1.5px, transparent 1.5px) !important;
+  background-size: 20px 20px !important;
+  color: #0f172a !important;
+  font-family: var(--font-sans) !important;
+  image-rendering: auto;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* 2. Typography: Thick, chunky, and powerful display titles paired with clean, elegant body text */
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.05em !important;
+  color: #0f172a !important;
+  text-transform: uppercase;
+}
+
+.neo-text-shadow {
+  text-shadow: 3.5px 3.5px 0px #000000 !important;
+}
+
+.neo-text-shadow-orange {
+  text-shadow: 3px 3px 0px #000000 !important;
+}
+
+p, span, a, li, input, textarea, label, .font-sans {
+  font-family: var(--font-sans) !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.625 !important; /* Increased to 1.6+ for a super spacious and readable layout */
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fbf9f4;
+  border-left: 3px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e26a37;
+  border: 3px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ca5c54;
+}
+
+/* 3. Global structural elements: Thick Black Outlines + Solid Blocky Shadows */
+.bg-white, 
+.bg-white\/60, 
+.bg-white\/80, 
+.bg-white\/40, 
+.bg-white\/75, 
+.bg-white\/92,
+.bg-white\/70,
+.card-shadow,
+.hero-shadow,
+[class*="bg-white"] {
+  background-color: #fffdfa !important; /* Soft matte cream for blocks */
+  border: 3px solid #0f172a !important;   /* Thick black outlines */
+  box-shadow: 6px 6px 0px 0px #0f172a !important; /* Hard blocky shadow */
+  border-radius: 6px !important;           /* Rigid school structure */
+}
+
+/* Redefine borders globally to enforce thick outlines */
+.border, 
+.border-slate-200, 
+.border-slate-200\/50, 
+.border-white\/50, 
+.border-white\/15, 
+.border-orange-500\/15, 
+.border-orange-500\/20, 
+.border-orange-500\/25,
+.border-black {
+  border: 3px solid #0f172a !important;
+}
+
+/* Disable soft shadow classes, force hard shadows */
+.shadow-sm, 
+.shadow-md, 
+.shadow-lg, 
+.shadow-xl, 
+.shadow-2xl, 
+.pixel-shadow-orange, 
+.pixel-shadow-red, 
+.pixel-shadow-green, 
+.pixel-shadow-lime, 
+.pixel-shadow-yellow, 
+.pixel-shadow-white,
+[class*="pixel-shadow-"],
+[class*="shadow-"] {
+  box-shadow: 6px 6px 0px 0px #0f172a !important;
+}
+
+/* 4. Color Blocking mapping: Retro Muted color palette overlays */
+
+/* Terracotta / Muted Orange */
+.bg-orange-500, 
+.bg-\[\#FF9C2A\], 
+.bg-orange-500\/10,
+.bg-orange-600 {
+  background-color: #e26a37 !important;
+  color: #fffdf9 !important;
+}
+.text-orange-500, 
+.text-orange-600, 
+.text-orange-700, 
+.text-\[\#FF9C2A\],
+.group-hover\:text-orange-600:hover {
+  color: #e26a37 !important;
+}
+.border-orange-500, 
+.border-\[\#FF9C2A\],
+[class*="border-\[#FF9C2A\]"] {
+  border-color: #0f172a !important;
+}
+
+/* Sage Green */
+.bg-\[\#9DD044\], 
+.bg-green-500,
+.bg-green-600 {
+  background-color: #7fa18a !important;
+  color: #fffdf9 !important;
+}
+.text-\[\#9DD044\], 
+.text-green-600,
+.text-[#9DD044] {
+  color: #7fa18a !important;
+}
+.border-\[\#9DD044\] {
+  border-color: #0f172a !important;
+}
+
+/* Clay Red */
+.bg-\[\#E70001\], 
+.bg-red-500,
+.bg-red-600 {
+  background-color: #ca5c54 !important;
+  color: #fffdf9 !important;
+}
+.text-\[\#E70001\], 
+.text-red-500,
+.text-[#E70001] {
+  color: #ca5c54 !important;
+}
+.border-\[\#E70001\] {
+  border-color: #0f172a !important;
+}
+
+/* 5. Artwork and Images with bold contours and solid shadows */
+img, 
+.illustration-card img,
+video {
+  border: 3px solid #0f172a !important;
+  box-shadow: 4px 4px 0px 0px #0f172a !important;
+  border-radius: 6px !important;
+}
+
+/* Prevent double borders or container clipping issues */
+.overflow-hidden {
+  overflow: visible !important;
+}
+
+/* Rigid shape adjustments (remove overly rounded buttons & cards) */
+.rounded-2xl, .rounded-xl, .rounded-lg, .rounded-md {
+  border-radius: 6px !important;
+}
+
+/* 6. Active interactions & hover states with hard-shadow offset transitions */
+button, 
+.cursor-pointer,
+.category-card {
+  transition: all 0.12s ease-in-out !important;
+}
+
+button:hover, 
+.cursor-pointer:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 8px 8px 0px 0px #0f172a !important;
+}
+
+button:active, 
+.cursor-pointer:active {
+  transform: translate(2px, 2px) !important;
+  box-shadow: 3px 3px 0px 0px #0f172a !important;
+}
+
+/* Prevent double shadow issues on navbar logo */
+#nav-logo, #nav-logo:hover, #nav-logo img, #nav-logo svg {
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  background: transparent !important;
+}
+
+/* Chatbot interface popup standard */
+zapier-interfaces-chatbot-embed {
+  z-index: 999999 !important;
+}

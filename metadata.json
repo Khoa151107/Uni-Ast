@@ -1,0 +1,6 @@
+{
+  "name": "UNI-Assistance",
+  "description": "Cổng thông tin hỗ trợ tân sinh viên FPT University vượt qua các cú sốc học tập, xã hội, ngoại khóa, tâm lý và gắn kết cộng đồng.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
